@@ -4,6 +4,8 @@ import { ToastController } from 'ionic-angular';
 import { BLE } from '@ionic-native/ble';
 import { ButtonStateDescriptionPipe } from '../../pipes/button-state-description/button-state-description';
 
+//custom branchs
+
 const BUTTON_SERVICE = '6e400001-b5a3-f393-e0a9-e50e24dcca9e';
 //////const BUTTON_SERVICE = 'BLE UART-MINEW';
 const BUTTON_STATE_CHARACTERISTIC = '6e400003-b5a3-f393-e0a9-e50e24dcca9e';
@@ -32,7 +34,7 @@ export class DetailPage {
     this.ble.connect(device.id).subscribe(
       peripheral => this.onConnected(peripheral),
       peripheral => this.showAlert('Disconnected', 'The peripheral unexpectedly disconnected')
-    
+
 
   }
 
